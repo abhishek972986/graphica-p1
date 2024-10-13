@@ -1,0 +1,85 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
+    --background-color: #ecf0f1;
+    --text-color: #34495e;
+    --event-color: #e74c3c;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+.calendar {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.month {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-around;
+}
+.weekdays li {
+    display: inline-block;
+    width: 14.2%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.days {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+.days li {
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.days li .date {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.days li .active {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    margin: 0 auto;
+}
+.event {
+    background-color: var(--event-color);
+    color: white;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    text-align: left;
+}
+.event-time {
+    font-weight: bold;
+}
